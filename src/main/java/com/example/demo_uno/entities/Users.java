@@ -2,11 +2,10 @@ package com.example.demo_uno.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import java.util.Date;
 
 @Setter
