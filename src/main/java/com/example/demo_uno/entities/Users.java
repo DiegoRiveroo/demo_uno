@@ -1,11 +1,8 @@
-package com.example.demo_uno.entities;
+package com.server.abdelmurserverdemo.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
 import lombok.*;
-import org.springframework.data.annotation.Id;
 
+import javax.persistence.*;
 import java.util.Date;
 
 @Setter
@@ -14,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "usuarios", schema = GenerationType.IDENTITY)
+@Table(name = "usuarios", schema ="transaccional")
 
 public class Users {
 
