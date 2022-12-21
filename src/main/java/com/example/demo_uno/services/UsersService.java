@@ -8,6 +8,18 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class UsersService {
 
-    private UsersRepository usersRepository;
+    private final UsersRepository usersRepository;
+
+    public Users saveUser(User userDto) {
+        Users userEntity = new Users();
+        userEntity.setName(userDto.getName());
+        userEntity.setLastname(userDto.getLastname());
+        userEntity.setAddress(userDto.getAddress());
+        userEntity.setDateBirth(userDto.getDateBirth());
+        return this.usersRepository.save(userEntity);
+    }
 
 }
+
+
+

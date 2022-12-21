@@ -1,0 +1,24 @@
+
+# https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+spring:
+  profiles:
+    active: local
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+logging:
+  file:
+    path: ./logs
+    name: ./logs/spring.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      file-name-pattern: ./logs/spring-%d{yyyy-MM-dd}.%i.log
+      max-history: 10
+      clean-history-on-start: true
+      total-size-cap: 100MB
+server:
+  shutdown: graceful
+  servlet:
+    context-path: /server-api
